@@ -19,46 +19,46 @@ Feature: Testing created content visibility
   Scenario Outline: Unlogged user tries to see private content
     Given I am on the main page
     And I am not logged in
-    When I try to find <private_post>
-    Then I can't see <private_post> link
+    When I try to find "<private_post>"
+    Then I can't see "<private_post>" link
 
     Examples:
       | private_post |
-      | "administrators private method" |
-      | "administrators private tool" |
-      | "administrators private use case" |
-      | "administrators private organization" |
-      | "administrators private standard" |
+      | administrators private method |
+      | administrators private tool |
+      | administrators private use case |
+      | administrators private organization |
+      | administrators private standard |
 
   Scenario Outline: Unlogged user tries to see public content
     Given I am on the main page
     And I am not logged in 
-    When I go to <public_post>
-    Then I can see <public_post>
+    When I go to "<public_post>"
+    Then I can see "<public_post>"
 
     Examples:
       | public_post |
-      | "administrators public method" |
-      | "administrators public tool" |
-      | "administrators public use case" |
-      | "administrators public organization" |
-      | "administrators public standard" |
+      | administrators public method |
+      | administrators public tool |
+      | administrators public use case |
+      | administrators public organization |
+      | administrators public standard |
 
   Scenario Outline: administrator tries to see his content
     Given I am on the main page
     And I am logged in as administrator
-    When I go to <post>
-    Then I ca see <post>
+    When I go to "<post>"
+    Then I ca see "<post>"
 
     Examples:
       | post |
-      | "administrators public method" |
-      | "administrators public tool" |
-      | "administrators public use case" |
-      | "administrators public organization" |
-      | "administrators public standard" |
-      | "administrators private method" |
-      | "administrators private tool" |
-      | "administrators private use case" |
-      | "administrators private organization" |
-      | "administrators private standard" |
+      | administrators public method |
+      | administrators public tool |
+      | administrators public use case |
+      | administrators public organization |
+      | administrators public standard |
+      | administrators private method |
+      | administrators private tool |
+      | administrators private use case |
+      | administrators private organization |
+      | administrators private standard |

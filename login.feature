@@ -15,17 +15,17 @@ Feature: Logging into system as different user
 
   Scenario Outline: Try to edit a webpage when not logged in
     Given I am on the main page
-    When I go to <post>
+    When I go to "<post>"
     Then I shouldn't see "Control panel"
-    But I can see <post>
+    But I can see "<post>"
 
     Examples:
       | post |
-      | "administrators method" |
-      | "administrators tool" |
-      | "administrators use case" |
-      | "administrators organization" |
-      | "administrators standard" |
+      | administrators method |
+      | administrators tool |
+      | administrators use case |
+      | administrators organization |
+      | administrators standard |
 
   Scenario: Try to edit method when not logged in
     Given I am on the main page
@@ -64,16 +64,16 @@ Feature: Logging into system as different user
 
   Scenario Outline: itsreviewer tries to edit a webpage
     Given I am logged in as itsreviewer
-    When I try to edit <post>
+    When I try to edit "<post>"
     Then I shouldn't see edit options 
 
     Examples:
       | post |
-      | "administrators method" |
-      | "administrators tool" |
-      | "administrators use case" |
-      | "administrators organization" |
-      | "administrators standard" |
+      | administrators method |
+      | administrators tool |
+      | administrators use case |
+      | administrators organization |
+      | administrators standard |
 
   Scenario: itsreviewer tries to create a new method
     Given I am on the main page
