@@ -7,16 +7,14 @@
 
 | Artifact | 1 | 2 | 3 | ... |
 |----------|---|---|---|-----|
-| Page XYZ1 | x | x |   |     |
-| Page XYZ2 | x |   | x |     |
-| Page ... |   |   | x |  x   |
-| Setting mapping OPQR to ABCD | x |  | x | |
-| Deleting XYZ | x |  | x | |
-| Doing something ... | | | | x |
-| Checking: relationAToB | x |  |  |  x  |
-| Checking: relationXtoY |   | x | x |    |
-| Checking: A covers B | x | x | x |    |
-| Checking ... | | | | x |
+| Logging in | x | x |   |     |
+| Cannot edit content | x |   | x |     |
+| Cannot create content |   |   | x |  x   |
+| Viewing methods | x |  | x | |
+| Viewing tools | x |  | x | |
+| Viewing use cases ... | | | | x |
+| Viewing organizations | x |  |  |  x  |
+| Viewing standards |   | x | x |    |
 
 ## Matice Feature-Test
 
