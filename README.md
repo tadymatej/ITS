@@ -1,6 +1,6 @@
 # ITS Projekt 1
 
-- **Autor:** Jméno Příjmení (xlogin99)
+- **Autor:** Matěj Žalmánek (xzalma00)
 - **Datum:** 2022-04-17
 
 ## Matice pokrytí artefaktů
@@ -18,39 +18,48 @@
 | Checking: A covers B | x | x | x |    |
 | Checking ... | | | | x |
 
-Pokud by byl popis artefaktů příliš dlouhý, je možné tabulku rozdělit na
-dvě části:
-
-Popis artefaktů:
-
-| Artifact Id (AId) | Artifact Description |
-|-------------|----------------------|
-| P\_1 | Web page for editing Use Case. |
-| P\_2 | Web page for viewing list of methods |
-| A\_1  | Activity for searching a method. |
-| ...     | ... |
-
-Matice pokrytí:
-
-| AId  | 1 | 2 | 3 | ... |
-|------|---|---|---|-----|
-| P\_1 | x | x |   |     |
-| P\_2 | x |   | x |     |
-| A\_1 | x | x |   |     |
-| ...  |   |   |   |     |
-
-
 ## Matice Feature-Test
 
-| Feature file | 1 | 2 | 3 | ... |
-|----------|---|---|---|-----|
-| file1.feature | x | x | | |
-| file2.feature |   |   | x | x |
-| ....feature |   |   |  |   |
+| Feature file table part 1| | | | | | | | | | | | | | 
+|---------------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+| Feature file (1/2) | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
+|---------------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| folder-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| form-fields.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| login.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| methods-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| organizations-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| permissions.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| post-visibility.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| security.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| sorting-filtering.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| standards-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| tools-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| use-cases-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| weird-usage.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+
+| Feature file table part 2| | | | | | | | | | | | | | 
+|---------------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+
+| Feature file (2/2) | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 |
+|---------------|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| folder-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| form-fields.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| login.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| methods-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| organizations-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| permissions.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| post-visibility.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| security.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| sorting-filtering.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| standards-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| tools-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| use-cases-crud.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| weird-usage.feature |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Grafická reprezentace pokrytí
-
-Tato sekce je volitelná, ale doporučená. Pokud je to možné, vybrané artefakty
-zvýrazněte barvou v daných diagramech.
 
 ![Use Case](UseCase.png)
