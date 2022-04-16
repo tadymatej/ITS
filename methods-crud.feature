@@ -77,21 +77,21 @@ Feature: CRUD operations with methods
         | my-part-method2 |
         | my-part-method3 |
 
-      Scenario: Add use cases to method creating-method-1
-        Given I am logged in as administrator
-        And There already exists creating-method-1
-        When I add use cases to method
-          | my-use-case1 |
-          | my-use-case2 |
-          | my-use-case3 |
-        Then I should find creating-method-1 with
-          | related-method1 |
-          | my-use-case1 |
-          | my-use-case2 |
-          | my-use-case3 |
+    Scenario: Add use cases to method creating-method-1
+      Given I am logged in as administrator
+      And There already exists creating-method-1
+      When I add use cases to method
+        | my-use-case1 |
+        | my-use-case2 |
+        | my-use-case3 |
+      Then I should find creating-method-1 with
+        | related-method1 |
+        | my-use-case1 |
+        | my-use-case2 |
+        | my-use-case3 |
 
-      Scenario: Remove existing method creating-method-1
-        Given I am logged in as administrator
-        And There already exists creating-method-1
-        When I remove creating-method-1
-        Then I shouldn't find creating-method-1
+    Scenario: Remove existing method creating-method-1
+      Given I am logged in as administrator
+      And There already exists creating-method-1
+      When I remove creating-method-1
+      Then I shouldn't find creating-method-1

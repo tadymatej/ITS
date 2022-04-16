@@ -30,34 +30,34 @@ Feature: CRUD operations with tools
       | related-method2 |
       | related-method3 |
 
-    Scenario: Add standards to an existing tool
-      Given I am logged in as administrator
-      And There already exists tool creating-tool1
-      When I add standards to tool
-        | my-standard1 |
-        | my-standard2 |
-        | my-standard3 |
-      Then I should find tool creating-tool1 with
-        | related-method1 |
-        | my-standard1 |
-        | my-standard2 |
-        | my-standard3 |
+  Scenario: Add standards to an existing tool
+    Given I am logged in as administrator
+    And There already exists tool creating-tool1    
+    When I add standards to tool
+      | my-standard1 |
+      | my-standard2 |
+      | my-standard3 |
+    Then I should find tool creating-tool1 with
+      | related-method1 |
+      | my-standard1 |
+      | my-standard2 |
+      | my-standard3 |
 
-    Scenario: Add test case to tool:
-      Given I am logged in as administrator
-      And There already exists tool creating-tool1
-      When I add test cases to tool
-        | my-test-case1 |
-        | my-test-case2 |
-        | my-test-case3 |
-      Then I should gind tool creating-tool1 with
-        | related-method1 |
-        | my-test-case1 |
-        | my-test-case2 |
-        | my-test-case3 |
+  Scenario: Add test case to tool:
+    Given I am logged in as administrator
+    And There already exists tool creating-tool1
+    When I add test cases to tool
+      | my-test-case1 |
+      | my-test-case2 |
+      | my-test-case3 |
+    Then I should gind tool creating-tool1 with
+      | related-method1 |
+      | my-test-case1 |
+      | my-test-case2 |
+      | my-test-case3 |
 
-    Scenario: Delete an existing tool
-      Given I am logged in as administrator
-      And There already exists tool creating-tool1
-      When I remove tool creating-tool1
-      Then I shouldn't find tool creating-tool1
+  Scenario: Delete an existing tool
+    Given I am logged in as administrator
+    And There already exists tool creating-tool1
+    When I remove tool creating-tool1
+    Then I shouldn't find tool creating-tool1
