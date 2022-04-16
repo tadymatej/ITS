@@ -10,6 +10,7 @@
 | Logging in | | |   |   |   |   |   |   |   |   |
 | Editing content | | X | X |   |   |   |   |   |   |   |
 | Creating content | X |   | |    |   |   |   |   |   |   |
+| Deleting content |   |   | | X |  |   |   |   |   |   |
 | Viewing methods | |  | | |   |   |   |   |   |   |
 | Viewing tools | |  | | |   |   |   |   |   |   |
 | Viewing use cases   | | | | |   |   |   |   |   |   |
@@ -33,6 +34,7 @@
 | Logging in |  |  |   | X  | X  | X  | X  |  X | X | X  |
 | Editing content | | | |   |   |   |   |   |   |   |
 | Creating content | X | X | X |     |   |   |   |   |   |   |
+| Deleting content |   |   | |    |  |   |   |   |   |   |
 | Viewing methods |  |  |  | X | X |   |   |   |   | X |
 | Viewing tools |  |  |  | X |   |   |   |   |   | X |
 | Viewing use cases   | | | | X |   |   |   |   |   | X |
@@ -54,12 +56,13 @@
 | Artifact | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 |
 |----------|---|---|---|---|---|---|---|---|---|---|
 | Logging in | X | |   |   |   |   |   |   |   |   |
-| Editing content | |   | |   |   |   |   |   |   |   |
-| Creating content |   |   | |    |   |   |   |   |   |   |
-| Viewing methods | X |  | | |   |   |   |   |   |   |
+| Editing content | |  | X | X  | X  | X | X |  |  | X |
+| Creating content |   | X | |    |   |   |   |   | X |   |
+| Deleting content |   |   | |    |  |   |   | X |   |   |
+| Viewing methods | X | X | X | X | X | X | X  | X | |   |
 | Viewing tools | |  | | |   |   |   |   |   |   |
 | Viewing use cases   | | | | |   |   |   |   |   |   |
-| Viewing organizations | |  |  |   |   |   |   |   |   |   |
+| Viewing organizations | |  |  |   |   |   |   |   | X | X |
 | Viewing standards |   | | |    |   |   |   |   |   |   |
 | Tool properties |   |   |   |   |   |   |   |   |   |   |
 | Tool relations |   |   |   |   |   |   |   |   |   |   |
@@ -67,23 +70,24 @@
 | Use case relations |   |   |   |   |   |   |   |   |   |   |
 | Evaluation Scenario properties |   |   |   |   |   |   |   |   |   |   |
 | Evaluation Scenario relations |   |   |   |   |   |   |   |   |   |   |
-| Evaluation Method properties |   |   |   |   |   |   |   |   |   |   |
-| Evaluation Method relations |   |   |   |   |   |   |   |   |   |   |
-| Organization properties |   |   |   |   |   |   |   |   |   |   |
+| Evaluation Method properties |   | X | X | X | X | X | X | X |   |   |
+| Evaluation Method relations |   | X | X | X | X | X | X | X |   |   |
+| Organization properties |   |   |   |   |   |   |   |   | X | X |
 | Standard properties |   |   |   |   |   |   |   |   |   |   |
-| Form fields |   |   |   |   |   |   |   |   |   |   |
+| Form fields |   | X  | X | X | X | X | X | X | X  | X |
 | Folders |   |   |   |   |   |   |   |   |   |   |
 
 | Artifact | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 |
 |----------|---|---|---|---|---|---|---|---|---|---|
 | Logging in | | |   |   |   |   |   |   |   |   |
-| Editing content | |   | |   |   |   |   |   |   |   |
-| Creating content |   |   | |    |   |   |   |   |   |   |
-| Viewing methods | | X | X | X |   |   |   |   |   |   |
-| Viewing tools | | X | X | X |   |   |   |   |   |   |
-| Viewing use cases   | | X | X | X |   |   |   |   |   |   |
-| Viewing organizations |  | X | X | X |   |   |   |   |   |   |
-| Viewing standards |   | X | X | X |   |   |   |   |   |   |
+| Editing content | |   | |   |   | X |   |   | X | X |
+| Creating content |   |   | |    | X  |   |   | X  |   |   |
+| Deleting content | X |   | |    |  |   | X |  |   |   |
+| Viewing methods | | | | X | X | X | X | X | X | X |
+| Viewing tools | | X | X | X | X | X | X | X | X | X |
+| Viewing use cases   | | | | X | X  | X  | X  | X | X | X |
+| Viewing organizations | | | X | X | X  | X | X | X | X | X |
+| Viewing standards |   | | | X | X | X | X | X | X | X |
 | Tool properties |   |   |   |   |   |   |   |   |   |   |
 | Tool relations |   |   |   |   |   |   |   |   |   |   |
 | Use case properties |   |   |   |   |   |   |   |   |   |   |
@@ -92,33 +96,34 @@
 | Evaluation Scenario relations |   |   |   |   |   |   |   |   |   |   |
 | Evaluation Method properties |   |   |   |   |   |   |   |   |   |   |
 | Evaluation Method relations |   |   |   |   |   |   |   |   |   |   |
-| Organization properties |   |   |   |   |   |   |   |   |   |   |
-| Standard properties |   |   |   |   |   |   |   |   |   |   |
-| Form fields |   |   |   |   |   |   |   |   |   |   |
+| Organization properties | X |   |   |   |   |   |   |   |   |   |
+| Standard properties |   |   |   |   | X | X |   |   |   |   |
+| Form fields | X |   |   |   | X | X | X | X | X | X |
 | Folders |   |   |   |   |   |   |   |   |   |   |
 
 
 | Artifact | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 |
 |----------|---|---|---|---|---|---|---|---|---|---|
 | Logging in | | |   |   |   |   |   |   |   |   |
-| Editing content | |   | |   |   |   |   |   |   |   |
-| Creating content |   |   | |    |   |   |   |   |   |   |
-| Viewing methods | |  | | |   |   |   |   |   |   |
-| Viewing tools | |  | | |   |   |   |   |   |   |
-| Viewing use cases   | | | | |   |   |   |   |   |   |
-| Viewing organizations | |  |  |   |   |   |   |   |   |   |
-| Viewing standards |   | | |    |   |   |   |   |   |   |
+| Editing content | X |   | | X | X | X | X | X | X |   |
+| Creating content |   |   | X |    |   |   |   |   |   |   |
+| Deleting content |   | X | |    |  |   |   |   |   | X |
+| Viewing methods | X | X | | |   |   |   |   |   |   |
+| Viewing tools | X | X | | |   |   |   |   |   |   |
+| Viewing use cases   | X | X | X | X | X  | X  | X  | X  | X  | X  |
+| Viewing organizations | X | X |  |   |   |   |   |   |   |   |
+| Viewing standards | X | X | |    |   |   |   |   |   |   |
 | Tool properties |   |   |   |   |   |   |   |   |   |   |
 | Tool relations |   |   |   |   |   |   |   |   |   |   |
-| Use case properties |   |   |   |   |   |   |   |   |   |   |
-| Use case relations |   |   |   |   |   |   |   |   |   |   |
+| Use case properties |   |   | X | X | X | X | X | X | X |   |
+| Use case relations |   |   | X | X | X | X | X | X | X |   |
 | Evaluation Scenario properties |   |   |   |   |   |   |   |   |   |   |
 | Evaluation Scenario relations |   |   |   |   |   |   |   |   |   |   |
 | Evaluation Method properties |   |   |   |   |   |   |   |   |   |   |
 | Evaluation Method relations |   |   |   |   |   |   |   |   |   |   |
 | Organization properties |   |   |   |   |   |   |   |   |   |   |
 | Standard properties |   |   |   |   |   |   |   |   |   |   |
-| Form fields |   |   |   |   |   |   |   |   |   |   |
+| Form fields | X | X | X | X | X | X | X | X | X |   |
 | Folders |   |   |   |   |   |   |   |   |   |   |
 
 
