@@ -5,7 +5,7 @@
 
 ## Matice pokrytí artefaktů
 
-| Artifact | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| Artifact (1/5) | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |----------|---|---|---|---|---|---|---|---|---|---|
 | Logging in | | |   |   |   |   |   |   |   |   |
 | Editing content | | X | X |   |   |   |   |   |   |   |
@@ -29,7 +29,7 @@
 | Form fields | X | X | X |   |   |   |   |   |   |   |
 | Folders |   |   |   |   | X  | X | X | X | X | X |
 
-| Artifact | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
+| Artifact (2/5) | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
 |----------|---|---|---|---|---|---|---|---|---|---|
 | Logging in |  |  |   | X  | X  | X  | X  |  X | X | X  |
 | Editing content | | | |   |   |   |   |   |   |   |
@@ -53,7 +53,7 @@
 | Form fields |  X | X | X  |   |   |   |   |   |   |   |
 | Folders |   |   |   |   |   |   |   |   |   |   |
 
-| Artifact | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 |
+| Artifact (3/5) | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 |
 |----------|---|---|---|---|---|---|---|---|---|---|
 | Logging in | X | |   |   |   |   |   |   |   |   |
 | Editing content | |  | X | X  | X  | X | X |  |  | X |
@@ -77,19 +77,19 @@
 | Form fields |   | X  | X | X | X | X | X | X | X  | X |
 | Folders |   |   |   |   |   |   |   |   |   |   |
 
-| Artifact | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 |
+| Artifact (4/5) | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 |
 |----------|---|---|---|---|---|---|---|---|---|---|
 | Logging in | | |   |   |   |   |   |   |   |   |
 | Editing content | |   | |   |   | X |   |   | X | X |
 | Creating content |   |   | |    | X  |   |   | X  |   |   |
 | Deleting content | X |   | |    |  |   | X |  |   |   |
-| Viewing methods | | | | X | X | X | X | X | X | X |
-| Viewing tools | | X | X | X | X | X | X | X | X | X |
-| Viewing use cases   | | | | X | X  | X  | X  | X | X | X |
-| Viewing organizations | | | X | X | X  | X | X | X | X | X |
-| Viewing standards |   | | | X | X | X | X | X | X | X |
-| Tool properties |   |   |   |   |   |   |   |   |   |   |
-| Tool relations |   |   |   |   |   |   |   |   |   |   |
+| Viewing methods | | X | X | X | | | | | | |
+| Viewing tools | | X | X | X | | | | | | |
+| Viewing use cases   | | X | X | X |  |  |  | | | |
+| Viewing organizations | X | X | X | X |  | | | | | |
+| Viewing standards |   | X | X | X | X | X | X | | | |
+| Tool properties |   |   |   |   |   |   |   | X | X | X  |
+| Tool relations |   |   |   |   |   |   |   | X | X | X |
 | Use case properties |   |   |   |   |   |   |   |   |   |   |
 | Use case relations |   |   |   |   |   |   |   |   |   |   |
 | Evaluation Scenario properties |   |   |   |   |   |   |   |   |   |   |
@@ -102,19 +102,19 @@
 | Folders |   |   |   |   |   |   |   |   |   |   |
 
 
-| Artifact | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 |
+| Artifact (5/5) | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 |
 |----------|---|---|---|---|---|---|---|---|---|---|
 | Logging in | | |   |   |   |   |   |   |   |   |
 | Editing content | X |   | | X | X | X | X | X | X |   |
 | Creating content |   |   | X |    |   |   |   |   |   |   |
 | Deleting content |   | X | |    |  |   |   |   |   | X |
-| Viewing methods | X | X | | |   |   |   |   |   |   |
+| Viewing methods | | | | |   |   |   |   |   |   |
 | Viewing tools | X | X | | |   |   |   |   |   |   |
-| Viewing use cases   | X | X | X | X | X  | X  | X  | X  | X  | X  |
-| Viewing organizations | X | X |  |   |   |   |   |   |   |   |
-| Viewing standards | X | X | |    |   |   |   |   |   |   |
-| Tool properties |   |   |   |   |   |   |   |   |   |   |
-| Tool relations |   |   |   |   |   |   |   |   |   |   |
+| Viewing use cases   | | | X | X | X  | X  | X  | X  | X  | X  |
+| Viewing organizations | | |  |   |   |   |   |   |   |   |
+| Viewing standards | | | |    |   |   |   |   |   |   |
+| Tool properties | X | X |   |   |   |   |   |   |   |   |
+| Tool relations | X | X |   |   |   |   |   |   |   |   |
 | Use case properties |   |   | X | X | X | X | X | X | X |   |
 | Use case relations |   |   | X | X | X | X | X | X | X |   |
 | Evaluation Scenario properties |   |   |   |   |   |   |   |   |   |   |
