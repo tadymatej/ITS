@@ -2,6 +2,7 @@ Feature: CRUD operations with tools
 
   Background:
     Given creating-tool1 has
+      | related-method |
       | related-method1 |
     * Exists method related-method1
     * Exists method related-method2
@@ -17,15 +18,18 @@ Feature: CRUD operations with tools
     Given I am logged in as administrator
     When I create creating-tool1
     Then I should find tool creating-tool1 with
+      | see-item |
       | related-method1 |
 
   Scenario: Add related methods to an existing tool
     Given I am logged in as administrator
     And There already exists tool creating-tool1
     When I add related methods to tool
+      | related-method |
       | related-method2 |
       | related-method3 |
     Then I should find tool creating-tool1 with
+      | see-item |
       | related-method1 |
       | related-method2 |
       | related-method3 |
@@ -34,10 +38,12 @@ Feature: CRUD operations with tools
     Given I am logged in as administrator
     And There already exists tool creating-tool1    
     When I add standards to tool
+      | standard |
       | my-standard1 |
       | my-standard2 |
       | my-standard3 |
     Then I should find tool creating-tool1 with
+      | see-item |
       | related-method1 |
       | my-standard1 |
       | my-standard2 |
@@ -47,10 +53,12 @@ Feature: CRUD operations with tools
     Given I am logged in as administrator
     And There already exists tool creating-tool1
     When I add test cases to tool
+      | test-case |
       | my-test-case1 |
       | my-test-case2 |
       | my-test-case3 |
-    Then I should gind tool creating-tool1 with
+    Then I should find tool creating-tool1 with
+      | see-item |
       | related-method1 |
       | my-test-case1 |
       | my-test-case2 |

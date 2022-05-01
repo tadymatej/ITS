@@ -1,0 +1,684 @@
+Feature: CRUD operations with standard # standards-crud.feature:1
+
+  Scenario: Create a new standard                     # standards-crud.feature:3
+    Given I am logged in as administrator             # steps/stepsCommon.py:6
+    When I create a new standard named "my-standard1" # steps/stepsStandardsCrud.py:5
+    Then I should see "Item created"                  # steps/stepsCommon.py:33
+      Traceback (most recent call last):
+        File "/usr/lib/python3/dist-packages/behave/model.py", line 1329, in run
+          match.run(runner.context)
+        File "/usr/lib/python3/dist-packages/behave/matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "steps/stepsCommon.py", line 38, in i_should_see
+          raise Exception(body.get_attribute("innerHTML"))
+      Exception: <section id="edit-bar" role="toolbar">
+        <div id="edit-zone" role="toolbar" class="pat-toolbar" data-pat-toolbar="{&quot;desktop_width&quot;: &quot;768px&quot;, &quot;submenu_width&quot;: &quot;180px&quot;, &quot;toolbar_width&quot;: &quot;120px&quot;}">
+          <div class="plone-toolbar-container">
+            <a class="plone-toolbar-logo">
+              <img alt="Plone Toolbar" src="http://localhost:8080/repo/++plone++static/plone-toolbarlogo.svg">
+            </a>
+            
+            <nav>
+              <ul class="plone-toolbar-main">
+                
+      
+        
+          
+        
+          <li id="contentview-folderContents" class="">
+            
+              <a href="http://localhost:8080/repo/standards/my-standard1-25/folder_contents?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" class="">
+                <span class="icon-folderContents  toolbar-menu-icon" aria-hidden="true">
+                </span>
+                <span>Contents</span>
+              </a>
+            
+          </li>
+          
+        
+          <li id="contentview-edit" class="">
+            
+              <a href="http://localhost:8080/repo/standards/my-standard1-25/edit?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" class="">
+                <span class="icon-edit  toolbar-menu-icon" aria-hidden="true">
+                </span>
+                <span>Edit</span>
+              </a>
+            
+          </li>
+          
+        
+          <li id="contentview-view" class="">
+            
+              <a href="http://localhost:8080/repo/standards/my-standard1-25?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" class="">
+                <span class="icon-view  toolbar-menu-icon" aria-hidden="true">
+                </span>
+                <span>View</span>
+              </a>
+            
+          </li>
+          
+        
+      
+      
+        
+        
+          
+        
+          <li id="plone-contentmenu-workflow">
+            <a href="http://localhost:8080/repo/standards/my-standard1-25/content_status_history" title="Change the state of this item" class="label-state-private">
+              <span aria-hidden="true" class="icon-plone-contentmenu-workflow state-private toolbar-menu-icon"></span>
+              
+              <span>
+                <span class="plone-toolbar-title">State:</span>
+              <span class="plone-toolbar-short-title">State</span>
+                <span class="plone-toolbar-state-title">Private</span>
+              </span>
+              <span class="plone-toolbar-caret"></span>
+            </a>
+            <ul aria-hidden="true">
+              <li class="plone-toolbar-submenu-header">
+                <span>
+                  <span>State:</span>
+                  <span class="state-private">Private</span>
+                </span>
+              </li>
+              <li class="plonetoolbar-workfow-transition None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/content_status_modify?workflow_action=publish&amp;_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="Publishing the item makes it visible to other users." id="workflow-transition-publish" class="">
+                  Publish
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-workfow-transition None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/content_status_modify?workflow_action=submit&amp;_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="Puts your item in a review queue, so it can be published on the site." id="workflow-transition-submit" class="">
+                  Submit for publication
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-workfow-transition actionSeparator">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/content_status_history" title="" id="workflow-transition-advanced" class="pat-plone-modal">
+                  Advanced...
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-workfow-transition None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/placeful_workflow_configuration" title="" id="workflow-transition-policy" class="">
+                  Policy...
+                </a>
+                
+              </li>
+            </ul>
+          </li>
+        
+          <li id="plone-contentmenu-actions">
+            <a href="http://localhost:8080/repo/standards/my-standard1-25/folder_contents" title="Actions for the current content item" class="label-">
+              
+              <span aria-hidden="true" class="icon-plone-contentmenu-actions toolbar-menu-icon"></span>
+              
+                <span class="plone-toolbar-title">Actions</span>
+              <span class="plone-toolbar-short-title">Actions</span>
+                
+              
+              <span class="plone-toolbar-caret"></span>
+            </a>
+            <ul aria-hidden="true">
+              <li class="plone-toolbar-submenu-header">
+                
+                  <span>Actions</span>
+                  
+                
+              </li>
+              <li class="plonetoolbar-content-action None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/object_cut?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="" id="plone-contentmenu-actions-cut" class="actionicon-object_buttons-cut">
+                  Cut
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-content-action None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/object_copy?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="" id="plone-contentmenu-actions-copy" class="actionicon-object_buttons-copy">
+                  Copy
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-content-action None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/delete_confirmation?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="" id="plone-contentmenu-actions-delete" class="actionicon-object_buttons-delete pat-plone-modal" data-pat-plone-modal="{&quot;actionOptions&quot;: {&quot;disableAjaxFormSubmit&quot;:true, &quot;redirectOnResponse&quot;:true}}">
+                  Delete
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-content-action None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/object_rename?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="" id="plone-contentmenu-actions-rename" class="actionicon-object_buttons-rename pat-plone-modal" data-pat-plone-modal="{}">
+                  Rename
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-content-action None">
+                <a href=" http://localhost:8080/repo/standards/my-standard1-25/@@manage-aliases" title="" id="plone-contentmenu-actions-redirection" class="actionicon-object_buttons-redirection">
+                  URL Management
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-content-action None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/@@ical_import_settings/enable?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="" id="plone-contentmenu-actions-ical_import_enable" class="actionicon-object_buttons-ical_import_enable">
+                  Enable icalendar import
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-content-action None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/@@faceted_subtyper/enable?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="" id="plone-contentmenu-actions-faceted.enable" class="actionicon-object_buttons-faceted.enable">
+                  Enable faceted navigation
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-content-action None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/@@faceted_search_subtyper/enable?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="" id="plone-contentmenu-actions-faceted.search.enable" class="actionicon-object_buttons-faceted.search.enable">
+                  Enable faceted search
+                </a>
+                
+              </li>
+            </ul>
+          </li>
+        
+          <li id="plone-contentmenu-display">
+            <a href="http://localhost:8080/repo/standards/my-standard1-25/select_default_view" title="Select the view mode for this folder, or set a content item as its default view." class="label-">
+              
+              <span aria-hidden="true" class="icon-plone-contentmenu-display toolbar-menu-icon"></span>
+              
+                <span class="plone-toolbar-title">Display</span>
+              <span class="plone-toolbar-short-title">Display</span>
+                
+              
+              <span class="plone-toolbar-caret"></span>
+            </a>
+            <ul aria-hidden="true">
+              <li class="plone-toolbar-submenu-header">
+                
+                  <span>Display</span>
+                  
+                
+              </li>
+              <li class="plonetoolbar-display-view None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/selectViewTemplate?templateId=view&amp;_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="" id="plone-contentmenu-display-view" class="actionMenuSelected">
+                  view
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-display-view None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/select_default_page?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="Select an item to be used as default view in this folder..." id="contextSetDefaultPage" class="pat-plone-modal">
+                  Select a content item
+      as default view...
+                </a>
+                
+              </li>
+            </ul>
+          </li>
+        
+          <li id="plone-contentmenu-portletmanager">
+            <a href="http://localhost:8080/repo/standards/my-standard1-25/manage-portlets" title="Change the portlets of this item" class="label-">
+              
+              <span aria-hidden="true" class="icon-plone-contentmenu-portletmanager toolbar-menu-icon"></span>
+              
+                <span class="plone-toolbar-title">Manage portlets</span>
+              <span class="plone-toolbar-short-title">Manage portlets</span>
+                
+              
+              <span class="plone-toolbar-caret"></span>
+            </a>
+            <ul aria-hidden="true">
+              <li class="plone-toolbar-submenu-header">
+                
+                  <span>Manage portlets</span>
+                  
+                
+              </li>
+              <li class="plonetoolbar-portlet-manager None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/manage-portlets?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="Manage all portlets" id="portlet-manager-all">
+                  All…
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-portlet-manager None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/@@topbar-manage-portlets/plone.footerportlets?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="Footer" id="portlet-manager-plone.footerportlets">
+                  Footer
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-portlet-manager None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/@@topbar-manage-portlets/plone.leftcolumn?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="Left column" id="portlet-manager-plone.leftcolumn">
+                  Left column
+                </a>
+                
+              </li>
+              <li class="plonetoolbar-portlet-manager None">
+                <a href="http://localhost:8080/repo/standards/my-standard1-25/@@topbar-manage-portlets/plone.rightcolumn?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" title="Right column" id="portlet-manager-plone.rightcolumn">
+                  Right column
+                </a>
+                
+              </li>
+            </ul>
+          </li>
+        
+      
+      
+        
+        
+          
+        
+          
+          <li id="contentview-history" class="">
+            
+              <a href="http://localhost:8080/repo/standards/my-standard1-25/@@historyview?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" class="">
+                <span class="icon-history" aria-hidden="true">
+                </span>
+                <span class="pat-moment" data-pat-moment="format:relative;" data-date="2022-05-01T09:39:04+00:00">a few seconds ago</span>
+              </a>
+            
+          </li>
+        
+          <li id="contentview-local_roles" class="">
+            
+              <a href="http://localhost:8080/repo/standards/my-standard1-25/@@sharing?_authenticator=5c43dcd78f55b2f6521c592fd75fab87729f1b8e" class="">
+                <span class="icon-local_roles  toolbar-menu-icon" aria-hidden="true">
+                </span>
+                <span>Sharing</span>
+              </a>
+            
+          </li>
+          
+        
+      
+      
+        
+      
+      
+      
+              </ul>
+              <ul id="personal-bar-container">
+                <li id="portal-personaltools" class="plone-toolbar-separator">
+                  <a href="http://localhost:8080/repo/useractions">
+                    <span class="icon-user" aria-hidden="true"></span>
+                    <span>administrator</span>
+                    <span class="plone-toolbar-caret"></span>
+                  </a>
+                  <ul>
+                    <li class="plone-toolbar-submenu-header">
+                      <span>administrator</span>
+                    </li>
+                    <li class="user-action">
+                      <a href="http://localhost:8080/repo/@@personal-preferences" id="personaltools-preferences" title="Preferences">
+                        Preferences
+                        
+                      </a>
+                    </li>
+                    <li class="user-action">
+                      <a href="http://localhost:8080/repo/dashboard" id="personaltools-dashboard" title="Dashboard">
+                        Dashboard
+                        
+                      </a>
+                    </li>
+                    <li class="user-action">
+                      <a href="http://localhost:8080/repo/@@overview-controlpanel" id="personaltools-plone_setup" title="Site Setup">
+                        Site Setup
+                        
+                      </a>
+                    </li>
+                    <li class="user-action">
+                      <a href="http://localhost:8080/repo/logout" id="personaltools-logout" title="Log out">
+                        Log out
+                        
+                          <span class="icon-logout"></span>
+                        
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section><div class="outer-wrapper">
+            <header id="content-header">
+              <div class="container">
+                
+            <div id="portal-header">
+          <a id="portal-logo" title="VALU3S Web Repository" style="text-decoration: none;" href="http://localhost:8080/repo">
+          <div style="float:left;">
+          <img src="http://localhost:8080/repo/@@site-logo/logo_valu3s_green_transparent.png" alt="VALU3S Repository" title="VALU3S Repository">
+          </div>
+          <div style="width:90%; vertical-align: middle; padding-top: 2%; text-decoration: none;">
+          <h1 style="@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&amp;display=swap'); font-family: 'Open Sans', sans-serif; font-size: 32px; text-decoration: none;">Verification and Validation of Automated Systems’ Safety and Security</h1>
+          </div>
+      </a>
+      <div id="portal-searchbox">
+      
+          <form id="searchGadget_form" action="http://localhost:8080/repo/@@search" role="search" data-pat-livesearch="ajaxUrl:http://localhost:8080/repo/@@ajax-search" class="pat-livesearch">
+      
+              <div class="LSBox">
+              <label class="hiddenStructure" for="searchGadget">Search Site</label>
+                   
+              <div class="searchSection">
+                  <input id="searchbox_currentfolder_only" class="noborder" type="checkbox" name="path" value="/repo/standards/my-standard1-25">
+                  <label for="searchbox_currentfolder_only" style="cursor: pointer; font-size: 14px;">only in current section</label>
+              </div>
+                   
+              <input name="SearchableText" type="text" size="18" id="searchGadget" title="Search Site" placeholder="Search Site" class="searchField" autocomplete="off"><ul class="livesearch-results" style="display: none;"></ul>
+      
+              <input class="searchButton" type="submit" value="Search">
+      
+               </div>
+          </form>
+      
+          <div id="portal-advanced-search" class="hiddenStructure">
+              <a href="http://localhost:8080/repo/@@search">Advanced Search…</a>
+          </div>
+      
+      </div>
+      
+      
+      
+      
+      
+      
+      </div>
+          
+                <div id="anonymous-actions">
+                </div>
+              </div>
+            </header>
+            <div id="mainnavigation-wrapper">
+              <div id="mainnavigation">
+      
+        <nav class="plone-navbar pat-navigationmarker" id="portal-globalnav-wrapper">
+          <div class="container">
+            <div class="plone-navbar-header">
+              <button type="button" class="plone-navbar-toggle" data-toggle="collapse" data-target="#portal-globalnav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+      
+            <div class="plone-collapse plone-navbar-collapse" id="portal-globalnav-collapse">
+              <ul class="plone-nav plone-navbar-nav" id="portal-globalnav">
+                <li class="method"><a href="http://localhost:8080/repo/method" class="state-published">Methods</a></li><li class="tools"><a href="http://localhost:8080/repo/tools" class="state-published">Tools</a></li><li class="front-page"><a href="http://localhost:8080/repo/front-page" class="state-published">About</a></li><li class="use-cases has_subtree"><a href="http://localhost:8080/repo/use-cases" class="state-published" aria-haspopup="true">Use Cases</a><input id="navitem-use-cases" type="checkbox" class="opener"><label for="navitem-use-cases" role="button" aria-label="Use Cases"></label><ul class="has_subtree dropdown"><li class="search-use-case-by-relationships"><a href="http://localhost:8080/repo/use-cases/search-use-case-by-relationships" class="state-published">Search use case by relationships</a></li></ul></li><li class="organizations"><a href="http://localhost:8080/repo/organizations" class="state-published">Organizations</a></li><li class="valu3s-glossary"><a href="http://localhost:8080/repo/valu3s-glossary" class="state-published">VALU3S Glossary</a></li><li class="standards inPath"><a href="http://localhost:8080/repo/standards" class="state-published">Standards</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      
+      
+      </div>
+            </div>
+            
+            <div id="above-content-wrapper">
+                <div id="viewlet-above-content"><nav id="portal-breadcrumbs" class="plone-breadcrumb">
+        <div class="container">
+          <span id="breadcrumbs-you-are-here" class="hiddenStructure">You are here:</span>
+          <ol aria-labelledby="breadcrumbs-you-are-here">
+            <li id="breadcrumbs-home">
+              <a href="http://localhost:8080/repo">Home</a>
+            </li>
+            <li id="breadcrumbs-1">
+              
+                <a href="http://localhost:8080/repo/standards">Standards</a>
+                
+              
+            </li>
+            <li id="breadcrumbs-2">
+              
+                
+                <span id="breadcrumbs-current">my-standard1</span>
+              
+            </li>
+          </ol>
+        </div>
+      </nav>
+      </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <aside id="global_statusmessage">
+            
+      
+          <div class="portalMessage info">
+              <strong>Info</strong>
+              Item created
+          </div>
+      
+      
+      
+            <div>
+            </div>
+          </aside>
+              </div>
+              <main id="main-container" class="row row-offcanvas row-offcanvas-right">
+                
+      
+          
+      
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12">
+                <article id="content">
+      
+                
+      
+                <header>
+                  <div id="viewlet-above-content-title"><span id="social-tags-body" style="display: none" itemscope="" itemtype="http://schema.org/WebPage">
+        
+      </span>
+      </div>
+                  
+                    <h1 class="documentFirstHeading">my-standard1</h1>
+      
+                  
+                  <div id="viewlet-below-content-title"><div class="documentByLine" id="plone-document-byline">
+        
+        
+          <span class="documentAuthor">
+            by <a href="http://localhost:8080/repo/author/administrator">administrator</a>
+               —
+          </span>
+        
+        
+      
+        
+        
+      
+        <span class="documentModified">
+          <span>last modified</span>
+          <span class="pat-moment" data-pat-moment="format:relative;" data-date="2022-05-01T09:39:04+00:00">a few seconds ago</span>
+        </span>
+        
+      
+        
+      
+        
+      
+        
+      
+      </div>
+      
+      </div>
+      
+                  
+                    <div class="documentDescription description">summary</div>
+      
+                  
+                </header>
+      
+                <div id="viewlet-above-content-body"></div>
+                <div id="content-core">
+                  
+      
+      
+        
+      
+        
+      
+        <fieldset id="folder-listing">
+            <legend>Contents</legend>
+            
+                
+          
+            
+      
+            
+              <p class="discreet">There are currently no items in this folder.</p>
+            
+      
+          
+        
+            
+        </fieldset>
+      
+      
+      
+                </div>
+                <div id="viewlet-below-content-body">
+      
+      
+      
+          <div class="visualClear"><!-- --></div>
+      
+          <div class="documentActions">
+              
+      
+              
+      
+          </div>
+      
+      </div>
+      
+                
+              </article>
+              </div>
+            </div>
+            <footer class="row">
+              <div class="col-xs-12 col-sm-12">
+                <div id="viewlet-below-content">
+      
+      
+      
+      
+      </div>
+              </div>
+            </footer>
+          </div>
+        
+                <div id="column1-container">
+                </div>
+                <div id="column2-container">
+                </div>
+              </main><!--/row-->
+            </div><!--/container-->
+          </div><!--/outer-wrapper --><footer id="portal-footer-wrapper">
+              <div class="container" id="portal-footer">
+                <div class="doormat row">
+          
+          <div class="col-xs-12 col-md-12">
+              <section class="portletContent">
+              <p style="text-align: center;">VALU3S Project</p>
+          </section>
+            </div>
+        </div>
+                <!--<div class="copyright row"><div class="col-xs-12"></div></div>-->
+                <!--<div class="colophon row"><div class="col-xs-12"></div></div>-->
+                <div class="site-actions row"><div class="col-xs-12"><ul class="actions-site_actions">
+            
+              <li class="portletItem">
+                <a href="http://localhost:8080/repo/sitemap">
+      
+                  <span>Site Map</span>
+      
+                  
+      
+                </a>
+              </li>
+            
+              <li class="portletItem">
+                <a href="http://localhost:8080/repo/accessibility-info">
+      
+                  <span>Accessibility</span>
+      
+                  
+      
+                </a>
+              </li>
+            
+              <li class="portletItem">
+                <a href="http://localhost:8080/repo/contact-info" class="pat-plone-modal" data-pat-plone-modal="{}">
+      
+                  <span>Contact</span>
+      
+                  
+      
+                </a>
+              </li>
+            
+          </ul></div></div>
+              </div>
+            </footer><script src="http://localhost:8080/repo/++resource++protect.js" type="application/javascript" id="protect-script" data-token="5c43dcd78f55b2f6521c592fd75fab87729f1b8e" data-site-url="http://localhost:8080/repo"></script>
+
+    And I should find standard "my-standard1"         # None
+
+  Scenario: Update an existing standard                                     # standards-crud.feature:9
+    Given I am logged in as administrator                                   # steps/stepsCommon.py:6
+    And There already exists standard named "my-standard1"                  # steps/stepsStandardsCrud.py:22
+    When I change name of standard "my-standard1" to "my-standard1-updated" # steps/stepsStandardsCrud.py:33
+      Traceback (most recent call last):
+        File "/usr/lib/python3/dist-packages/behave/model.py", line 1329, in run
+          match.run(runner.context)
+        File "/usr/lib/python3/dist-packages/behave/matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "steps/stepsStandardsCrud.py", line 38, in i_change_name_of_standard_to
+          standard = web.standardsPage.find_method_by_name(standard)
+      AttributeError: 'StandardsPageUT' object has no attribute 'find_method_by_name'
+
+    Then I should see "Changes saved"                                       # None
+    And I should find standard "my-standard1-updated"                       # None
+    But I shouldn't find standard "my-standard1"                            # None
+
+  Scenario: Delete an existing standard                    # standards-crud.feature:17
+    Given I am logged in as administrator                  # steps/stepsCommon.py:6
+    And There already exists standard named "my-standard1" # steps/stepsStandardsCrud.py:22
+      Traceback (most recent call last):
+        File "steps/stepsStandardsCrud.py", line 29, in there_already_exists_standard_named
+          web.standardsPage.find_method_by_name("creating-method-1")
+      AttributeError: 'StandardsPageUT' object has no attribute 'find_method_by_name'
+      
+      During handling of the above exception, another exception occurred:
+      
+      Traceback (most recent call last):
+        File "/usr/lib/python3/dist-packages/behave/model.py", line 1329, in run
+          match.run(runner.context)
+        File "/usr/lib/python3/dist-packages/behave/matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "steps/stepsStandardsCrud.py", line 31, in there_already_exists_standard_named
+          i_create_a_new_standard_named(context, standard)
+        File "steps/stepsStandardsCrud.py", line 9, in i_create_a_new_standard_named
+          web.standardsPage.open()
+        File "/home/matej/VUT/ITS/project/WebUT/subpages/subpage.py", line 9, in open
+          self.driver.get(self.url)
+        File "/home/matej/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+          self.execute(Command.GET, {'url': url})
+        File "/home/matej/.local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+          self.error_handler.check_response(response)
+        File "/home/matej/.local/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+          raise exception_class(message, screen, stacktrace)
+      selenium.common.exceptions.NoSuchWindowException: Message: Browsing context has been discarded
+
+HOOK-ERROR in after_feature: AttributeError: 'Context' object has no attribute 'testingPage'
+    When I delete standard named "my-standard1"            # None
+    Then I shouldn't find standard "my-standard1"          # None
+
+
+Failing scenarios:
+  standards-crud.feature:3  Create a new standard
+  standards-crud.feature:9  Update an existing standard
+  standards-crud.feature:17  Delete an existing standard
+
+0 features passed, 1 failed, 0 skipped
+0 scenarios passed, 3 failed, 0 skipped
+5 steps passed, 3 failed, 6 skipped, 0 undefined
+Took 0m34.575s

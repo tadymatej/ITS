@@ -2,8 +2,8 @@ Feature: CRUD operations for Use case
 
   Background:
     Given creating-use-case1 has 
-      | my-organization1 |
-      | my-evaluation-scenario1 |
+      | organization | evaluation-scenario |
+      | my-organization1 | my-evaluation-scenario1 |
     * Exists organization my-organization1
     * Exist organization my-organization2
     * Exist organization my-organization3
@@ -33,9 +33,11 @@ Feature: CRUD operations for Use case
     Given I am logged in as administrator
     And I have created use case creating-use-case1 with case domain "Aerospace"
     When I add evaluation scenarios
+      | evaluation-scenario |
       | my-evaluation-scenario2 |
       | my-evaluation-scenario3 |
     Then I should see use case creating-use-case1 with evaluation scenarios list with
+      | see-item |
       | my-evaluation-scenario1 |
       | my-evaluation-scenario2 | 
       | my-evaluation-scenario3 |
@@ -44,10 +46,12 @@ Feature: CRUD operations for Use case
     Given I am logged in as administrator
     And I have created use case creating-use-case1 with case domain "Aerospace"
     When I add standards
+      | standard |
       | my-standard1 | 
       | my-standard2 |
       | my-standard3 |
     Then I should see use case creating-use-case1 with standards
+      | see-item |
       | my-standard1 | 
       | my-standard2 |
       | my-standard3 |
@@ -56,9 +60,11 @@ Feature: CRUD operations for Use case
     Given I am logged in as administrator
     And I have already created use case creating-use-case1 with case domain "Aerospace"
     When I add partners
+      | organization |
       | my-organization2 |
       | my-organization3 |
     Then I should see use case creating-use-case1 with partners
+      | see-item |
       | my-organization2 |
       | my-organization3 |
 
@@ -67,19 +73,3 @@ Feature: CRUD operations for Use case
     And I have created use case creating-use-case1 with case domain "Aerospace"
     When I delete creating-use-case1
     Then There shouldn't be creating-use-case1
-
-
-  #Scenario: Create a new use case with wrong ER binding (organization)
-  #  Given I am logged in as administrator
-  #  When I create a new use case "use-case1" with case domain "Aerospace" and evaluation scenario "my-evaluation-scenario1"
-  #  Then I shouldn't find use case "use-case1" in Use Cases directory
-
-  #Scenario: Create a new use case with wrong ER binding (domain)
-  #  Given I am logged in as administrator
-  #  When I create a new use case "use-case1" with provider "my-organization1" and evaluation scenario "my-evaluation-scenario1"
-  #  Then I shouldn't find use case "use-case1" in Use Cases directory
-
-  #Scenario: Create a new use case with wrong ER binding (evaluation scenario)
-  #  Given I am logged in as administrator
-  #  When I create a new use case "use-case1" with provider "my-organization" and case domain "Aerospace"
-  #  Then I shouldn't find use case "use-case1" in Use Cases directory

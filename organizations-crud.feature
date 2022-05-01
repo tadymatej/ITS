@@ -2,6 +2,7 @@ Feature: CRUD operations with organization
   
   Background:
     Given organization organization1 has data
+      | organization | summary | acronym | url | contact | email | description |
       | Organization1 | my_summary | ACRONYM | https://google.com | me | me@email.com | description |
 
   Scenario: Create a new organization
@@ -10,14 +11,17 @@ Feature: CRUD operations with organization
     Then I should see "Item created"
     And I shoud find organization1
     And I should see organization organization1 with data
+      | organization | summary | acronym | url | contact | email | description |
       | Organization1 | my_summary | ACRONYM | https://google.com | me | me@email.com | description |
 
   Scenario: Update an existing organization
     Given I am logged in as administrator
     And organization organization1 is already created
     When I set to organization organization1 data
+      | organization | summary | acronym | url | contact | email | description |
       | Organization1_updated | my_summary_updated | ACRONYM_updated | https://seznam.com | me_updated | me_updated@gmail.com | des_updated |
     Then I should see organization organization1 with data
+      | organization | summary | acronym | url | contact | email | description |
       | Organization1_updated | my_summary_updated | ACRONYM_updated | https://seznam.com | me_updated | me_updated@gmail.com | des_updated |
 
   Scenario: Delete organization Organization1

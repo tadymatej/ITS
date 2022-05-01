@@ -1,6 +1,8 @@
 
 from selenium import webdriver
 
+from valu3sUT import *
+
 class TestingPage:
     """
     Třída obsahující informace o driveru testované stránky, stará se o otevření webu, přihlášení se na web...
@@ -26,6 +28,7 @@ class TestingPage:
         self.loggedIn = False
         if(browser == "Firefox"): self.driverWebPage= webdriver.Firefox(executable_path=driverExecutablePath)
         elif(browser == "Chrome"): self.driverWebPage= webdriver.Chrome(executable_path=driverExecutablePath)
+        self.driverWebPage.implicitly_wait(15)
     
     def logIn(self, loggingPage, email, password, submitValueButton): #type: (TestingPage, str, str, str, WebElement) -> None
         """
@@ -64,7 +67,44 @@ class TestingPage:
         """
         self.driverWebPage.close()
 
-TestingPage("http://localhost:8080", False, "Firefox", "./driver/geckodriver")
+#!/usr/bin/env python3
+from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoAlertPresentException
+from selenium.common.exceptions import WebDriverException
 
+def get_driver():
+    '''Get Firefox/Chrome driver from Selenium Hub'''
+    try:
+        driver = webdriver.Remote(
+                command_executor='http://localhost:4444/wd/hub',
+                desired_capabilities=DesiredCapabilities.FIREFOX)
+    except WebDriverException:
+        driver = webdriver.Remote(
+                command_executor='http://localhost:4444/wd/hub',
+                desired_capabilities=DesiredCapabilities.CHROME)
+    driver.implicitly_wait(15)
+
+    # Web stranku ziskate nasledujicim:
+    # (jedno nebo druhe, zalezi na nastaveni prostedi)
+    # driver.get("http://valu3s:8080/repo")
+    # driver.get("http://localhost:8080/repo")
+
+    return driver
+
+    # Nezapomente vzdy po ukonceni testovani zavrit driver:
+    # driver.close()
+
+
+#TODO: předělat na get_driver() !!!
 def before_feature(context, feature):
-    context.testingPage = TestingPage("http://localhost:8080", False, "Firefox", "./driver/geckodriver")
+    testingPage = TestingPage("http://localhost:8080/repo", False, "Firefox", "/home/matej/bin/geckodriver")
+    context.valu3sWeb = Valu3sUT(testingPage.getDriverWebPage())
+    context.GLOBALS = dict()
+    context.datas = dict()
+    context.types = dict()
+
+def after_feature(context, feature):
+    context.testingPage.closePage()
